@@ -22,7 +22,7 @@ $(function(){
 
     var newToDo = new ToDo(inputtedToDo, inputtedDueDate, inputtedSubTask, inputtedNote);
 
-    $("ul#toDoList").append("<li><span class ='toDoDate'>" + newToDo.toDoDate() + "</span></li>" );
+    $("#toDoList").append( "<ul><span class='toDoDate'>" +newToDo.toDoDate() + "</span>" + "<a class ='remove'>Remove</a></ul>");
 
     $("input#new-toDo").val("");
     $("input#new-dueDate").val("");
@@ -36,6 +36,13 @@ $(function(){
       $(".subTask").text(newToDo.subtask);
       $(".note").text(newToDo.note);
 
+    });
+
+    // $("#toDoList").submit(function(event){
+    //   event.preventDefault();
+    $(".remove").last().click(function(){
+      $(this).parent().remove();
+      $("#show-toDoList").hide();
 
     });
   });
