@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>To-do!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To Do List!</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Enter to make a to-do list:</h2>
+          <form id="formOne">
+            <div class="form-group">
+              <label for="new-toDo">To Do</label>
+              <input type="text" class="form-control" id="new-toDo">
+
+            </div>
+            <div class="form-group">
+              <label for="new-dueDate">Due Date</label>
+              <input type="date" class="form-control" id="new-dueDate">
+
+            </div>
+
+            <div class="form-group">
+              <label for="new-subTask">Subtasks</label>
+              <input type="text" class="form-control" id="new-subTask">
+
+            </div>
+
+            <div class="form-group">
+              <label for="new-note">Note</label>
+              <input type="text" class="form-control" id="new-note">
+
+            </div>
+
+
+            <button type="submit" class="btn">Add</button>
+          </form>
+
+          <h2>To Do List:</h2>
+          <ul id="toDoList">
+
+          </ul>
+
+        </div>
+        <div class="col-md-6">
+          <div id="show-toDoList">
+            <h2></h2>
+
+            <p>Due Date: <span class="date"></span></p>
+            <p>Subtasks: <span class="subTask"></span></p>
+            <p>Note: <span class="note"></span></p>
+
+
+          </div>
+        </div>
+      </div>
+     </div>
+  </body>
+</html>
